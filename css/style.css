@@ -43,36 +43,6 @@ p {
   margin: 0 2% 20px;
 }
 
-@media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-    .one-half {
-      width: 46%;
-    }
-    .one-third {
-      width: 29.33333%;
-    }
-    .one-fourth {
-        width: 21%;
-     }
-   }
-   @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
-  @media (min-width: 1920px) {
-    .container {
-      width: 1800px;
-    }
-  }
-
 /* HEADER */
 header {
   color: #FFFFFF;
@@ -83,15 +53,15 @@ header nav {
   padding: 1em 0;
 }
 header nav ul {
-  display: inline;
-  text-align: right;
-  float: right;
-  margin: 0;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 header nav ul > li {
   list-style-type: none;
-  display: inline-block;
-  margin: 0 15px;
+  display: block;
+  margin: 15px 15px;
 }
 header nav ul > li.btn-outline {
   padding: 10px 15px;
@@ -108,6 +78,11 @@ header nav ul > li > a {
 header nav ul > li.btn-outline:hover > a {
   color: #34495E;
 }
+header .site-logo {
+  text-align: center;
+  margin:0 auto;
+  display:block;
+}
 header .hero {
   text-align: center;
   display: block;
@@ -115,6 +90,7 @@ header .hero {
 }
 header .hero h1 {
   font-size: 48px;
+  line-height: 48px;
   font-weight: normal;
   margin: 95px 0 0;
 }
@@ -211,7 +187,7 @@ header .hero img {
 .box h4 {
   font-size: 50px;
   font-weight: normal;
-  margin: 40px 0 10px;
+  margin: 20px 0 10px;
   color: #3498DB;
 }
 .box h4 span {
@@ -227,7 +203,7 @@ header .hero img {
 }
 .box ul li {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 100;
 }
 .box .btn {
@@ -254,7 +230,7 @@ header .hero img {
 .testimonials ul li {
   list-style-type: none;
 }
-.testimonials: blockquote {
+.testimonials blockquote {
   color: #FFFFFF;
   text-align: left;
   font-style: italic;
@@ -308,6 +284,7 @@ footer p, footer nav ul {
   font-weight: 100;
   text-align: center;
   margin: 10px auto 0;
+  padding:0;
 }
 footer nav ul li {
   list-style-type: none;
@@ -318,9 +295,24 @@ footer nav ul li a {
   text-decoration: none;
 }
 footer .logo {
-  padding: 2.35em 0;
+  padding: 2em 0;
   margin: 0 auto;
   display: block;
+  width:60px;
+}
+footer .one-third {
+  width:96%;
+  min-height: 1px;
+  margin: 0 2% 0px;
+}
+
+@media (min-width: 768px) {
+
+  footer .one-third {
+    width:96%;
+    min-height: 1px;
+    margin: 0 2% 0px;
+  }
 }
 
 @media (min-width: 992px){
@@ -329,6 +321,13 @@ footer .logo {
      background-image: linear-gradient(to left,
         #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
      height: 100px;
+  }
+  footer .one-third {
+    width:29.33333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    margin: 0 2% 20px;
   }
   footer p, footer nav ul{
      padding: 2em 0;
@@ -339,9 +338,68 @@ footer .logo {
    }
    footer .logo{
      padding: 2em 0 2em 1.5em;
+     width:80px;
    }
+}
+   
 
-   /* DASHBOARD */
+ @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+    .one-half {
+      width: 46%;
+    }
+    .one-third {
+      width: 29.33333%;
+    }
+    .one-fourth {
+        width: 21%;
+     }
+     .testimonials .one-fourth {
+      width:46%;
+     }
+     .testimonials .alternate {
+      margin-top:0px;
+     }
+    header .site-logo {
+      display:inline-block;
+    }
+    header nav ul {
+      display: inline;
+      text-align: right;
+      float: right;
+      margin: 0;
+    }
+    header nav ul > li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0 15px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+    .testimonials .one-fourth {
+      width:21%;
+    }
+    .testimonials ul li.alternate {
+      margin-top:20px;
+    }
+   }
+   @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .container {
+      width: 1800px;
+    }
+  }
+   
+/* DASHBOARD */
  .dashboard {
    background: #F7F7F7;
  }
@@ -422,8 +480,6 @@ footer .logo {
    margin-right:10px;
    margin-top:8px;
  }
-   
-
 
 
 
