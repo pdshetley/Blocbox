@@ -437,6 +437,9 @@ footer .one-third {
    list-style-type: none;
    margin-bottom: 15px;
  }
+ .left-nav .items ul li.active a {
+  color:#000;
+ }
  .left-nav .items ul li a {
    color:#FFFFFF;
    text-decoration: none;
